@@ -1,0 +1,78 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "The Shawshank Redemption",
+      "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common ",
+      "image": "https://upload.wikimedia.org/wikipedia/en/8/81/ShawshankRedemptionMoviePoster.jpg",
+      "rating": 5,
+      "watched": true,
+      "year": "1972",
+      "genre": "Thriller",
+      "review": "It was good movie,had a fun."
+    },
+    {
+      "id": "2",
+      "title": "The Godfather",
+      "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/1/1c/Godfather_ver1.jpg",
+      "rating": 5,
+      "review": "very good film",
+      "watched": true,
+      "year": "1970",
+      "genre": "Mafia"
+    },
+    {
+      "id": "3",
+      "title": "The Dark Knight",
+      "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
+      "rating": 5,
+      "watched": true,
+      "year": "2007",
+      "genre": "Thriller",
+      "review": "The best movie ever,GREAT movie!"
+    },
+    {
+      "id": "4",
+      "title": "Pulp Fiction",
+      "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/3/3b/Pulp_Fiction_%281994%29_poster.jpg",
+      "rating": 5,
+      "review": "Cult Classic of Torrintono ",
+      "watched": true,
+      "year": "1975",
+      "genre": "Drama/Action"
+    },
+    {
+      "id": "5",
+      "title": "Schindler's List",
+      "description": "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/3/38/Schindler%27s_List_movie.jpg",
+      "rating": 5,
+      "review": "very emotional movie",
+      "watched": true,
+      "year": "1980",
+      "genre": "Drama"
+    },
+    {
+      "id": "2d4e",
+      "title": "Pushpa 2: The Rule",
+      "description": "Pushpa 2: The Rule is an upcoming Indian Telugu-language action drama film directed and written by Sukumar under his banner Sukumar Writings and produced by Naveen Yerneni and Yalamanchili Ravi Shankar under their Mythri Movie Makers banner.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/1/11/Pushpa_2-_The_Rule.jpg",
+      "rating": 5,
+      "review": "Didn't watch.. movie yet to release. eagerly waiting",
+      "watched": false,
+      "year": "2025",
+      "genre": "Thriller"
+    },
+    {
+      "id": "c4d0",
+      "title": "Joker",
+      "description": "Joker is a 2019 American psychological thriller film directed and co-produced by Todd Phillips from a screenplay co-written with Scott Silver. The film, loosely based on DC Comics characters, stars Joaquin Phoenix as the Joker.",
+      "image": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg",
+      "genre": "Thriller",
+      "year": "2019"
+    }
+  ]
+}

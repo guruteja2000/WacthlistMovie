@@ -1,0 +1,251 @@
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  background-color: #ffc107; /* Yellow */
+  color: #333; /* Dark gray text */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  text-align: center;
+}
+
+.header {
+  background-color: #007bff; /* Blue */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-add-movie {
+  background-color: #ffc107; /* Yellow */
+  color: #333; /* Dark gray text */
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-add-movie:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2; /* Ash color */
+  color: #333; /* Dark gray text */
+  margin: 0;
+}
+
+.header {
+  background-color: #007bff; /* Blue */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  width: 120px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-add-movie {
+  background-color: #ffc107; /* Yellow */
+  color: #333; /* Dark gray text */
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-add-movie:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.search-bar {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffc107; /* Yellow */
+  margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  background-color: #333; /* Dark gray */
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #555; /* Darker gray on hover */
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movie-item {
+  width: 300px;
+  background-color: #fff; /* White background */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.additional-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+.movie-details {
+  padding: 15px;
+}
+
+.movie-details h3 {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.movie-details p {
+  margin: 5px 0;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.rating-label {
+  margin-right: 10px;
+}
+
+.review-edit {
+  margin-bottom: 10px;
+}
+
+.review-view {
+  margin-bottom: 10px;
+}
+
+.review-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.review-content {
+  margin-bottom: 10px;
+}
+
+.btn-submit,
+.btn-edit {
+  background-color: #ffc107; /* Yellow */
+  color: #333; /* Dark gray text */
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.section-title {
+  text-align: center;
+}
+
+.btn-submit:hover,
+.btn-edit:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.btn-edit-movie {
+  background-color: #007bff; /* Blue */
+  color: #fff; /* White text */
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.btn-edit-movie:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-delete {
+  background-color: #dc3545; /* Red */
+  color: #fff; /* White text */
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-delete:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.watched-toggle {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .movie-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-item {
+    width: 100%;
+  }
+}

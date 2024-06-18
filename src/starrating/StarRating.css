@@ -1,0 +1,18 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.star:hover {
+  color: #ff9800;
+}
