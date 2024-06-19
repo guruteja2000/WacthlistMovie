@@ -14,48 +14,66 @@ function Home() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const movies = useSelector(selectAllMovies)
+
   const [editingReview, setEditingReview] = useState(null)
   const [reviewText, setReviewText] = useState("")
+  const [localMovies, setLocalMovies] = useState([])
 
   useEffect(() => {
     dispatch(fetchMovies())
   }, [dispatch])
 
-  const handleDelete = (id) => {
-    dispatch(deleteMovie(id)).then(() => {
-      dispatch(fetchMovies())
-    })
+  useEffect(() => {
+    setLocalMovies(movies)
+  }, [movies])
+
+  const handleDelete = async (id) => {
+    setLocalMovies(localMovies.filter((movie) => movie.id !== id))
+
+    await dispatch(deleteMovie(id))
   }
 
   const handleEdit = (id) => {
     navigate(`/edit-movie/${id}`)
   }
 
-  const handleRatingChange = (id, newRating) => {
-    const movie = movies.find((movie) => movie.id === id)
-    dispatch(updateMovie({ ...movie, rating: newRating })).then(() => {
-      dispatch(fetchMovies())
-    })
+  const handleRatingChange = async (id, newRating) => {
+    const updatedMovies = localMovies.map((movie) =>
+      movie.id === id ? { ...movie, rating: newRating } : movie
+    )
+    setLocalMovies(updatedMovies)
+
+    await dispatch(updateMovie({ id, rating: newRating }))
   }
 
-  const handleWatchedToggle = (id) => {
-    const movie = movies.find((movie) => movie.id === id)
-    dispatch(updateMovie({ ...movie, watched: !movie.watched })).then(() => {
-      dispatch(fetchMovies())
-    })
+  const handleWatchedToggle = async (id) => {
+    const updatedMovies = localMovies.map((movie) =>
+      movie.id === id ? { ...movie, watched: !movie.watched } : movie
+    )
+    setLocalMovies(updatedMovies)
+
+    await dispatch(
+      updateMovie({
+        id,
+        watched: !localMovies.find((movie) => movie.id === id).watched,
+      })
+    )
   }
 
   const handleReviewChange = (e) => {
     setReviewText(e.target.value)
   }
 
-  const handleReviewSubmit = (id) => {
-    const movie = movies.find((movie) => movie.id === id)
-    dispatch(updateMovie({ ...movie, review: reviewText })).then(() => {
-      dispatch(fetchMovies())
-    })
+  const handleReviewSubmit = async (id) => {
+    const updatedMovies = localMovies.map((movie) =>
+      movie.id === id ? { ...movie, review: reviewText } : movie
+    )
+    setLocalMovies(updatedMovies)
+
+    await dispatch(updateMovie({ id, review: reviewText }))
     setEditingReview(null)
     setReviewText("")
+    dispatch(fetchMovies())
   }
 
   const handleEditReview = (id, existingReview) => {
@@ -82,7 +100,7 @@ function Home() {
       <section className="content">
         <h2 className="section-title">Watchlisted Movies</h2>
         <div className="movie-list">
-          {movies.map((movie) => (
+          {localMovies.map((movie) => (
             <div key={movie.id} className="movie-item">
               <div className="image-container">
                 <img src={movie.image} alt={movie.title} />
