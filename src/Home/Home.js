@@ -83,9 +83,11 @@ function Home() {
         <h2 className="section-title">Watchlisted Movies</h2>
         <div className="movie-list">
           {movies.length === 0 ? (
-            <div className="loading-container">
-              <div className="loader"></div>
-              <p>Loading...</p>
+            <div className="load-cont">
+              <div className="loading-container">
+                <div className="loader"></div>
+                <p>Loading...</p>
+              </div>
             </div>
           ) : (
             movies.map((movie) => (
