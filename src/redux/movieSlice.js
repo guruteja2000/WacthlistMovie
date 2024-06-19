@@ -4,23 +4,20 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 
 // Async thunk to fetch movies
 export const fetchMovies = createAsyncThunk("movie/fetchMovies", async () => {
-  const response = await fetch("https://wacthlist-movie.vercel.app/api/movies")
+  const response = await fetch("/api/movies")
   const data = await response.json()
   return data
 })
 
 // Async thunk to add a movie
 export const addMovie = createAsyncThunk("movie/addMovie", async (movie) => {
-  const response = await fetch(
-    "https://wacthlist-movie.vercel.app/api/movies",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(movie),
-    }
-  )
+  const response = await fetch("/api/movies", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(movie),
+  })
   const data = await response.json()
   return data
 })
@@ -29,16 +26,13 @@ export const addMovie = createAsyncThunk("movie/addMovie", async (movie) => {
 export const updateMovie = createAsyncThunk(
   "movie/updateMovie",
   async (movie) => {
-    const response = await fetch(
-      `https://wacthlist-movie.vercel.app/api/movies/${movie.id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(movie),
-      }
-    )
+    const response = await fetch(`/api/movies/${movie.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(movie),
+    })
     const data = await response.json()
     return data
   }
@@ -46,7 +40,7 @@ export const updateMovie = createAsyncThunk(
 
 // Async thunk to delete a movie
 export const deleteMovie = createAsyncThunk("movie/deleteMovie", async (id) => {
-  await fetch(`https://wacthlist-movie.vercel.app/api/movies/${id}`, {
+  await fetch(`/api/movies/${id}`, {
     method: "DELETE",
   })
   return id
