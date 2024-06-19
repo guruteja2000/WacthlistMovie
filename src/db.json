@@ -41,7 +41,7 @@
       "rating": 5,
       "review": "Cult Classic of Torrintono ",
       "watched": true,
-      "year": "1975",
+      "year": "1978",
       "genre": "Drama/Action"
     },
     {
@@ -56,23 +56,30 @@
       "genre": "Drama"
     },
     {
-      "id": "2d4e",
-      "title": "Pushpa 2: The Rule",
-      "description": "Pushpa 2: The Rule is an upcoming Indian Telugu-language action drama film directed and written by Sukumar under his banner Sukumar Writings and produced by Naveen Yerneni and Yalamanchili Ravi Shankar under their Mythri Movie Makers banner.",
-      "image": "https://upload.wikimedia.org/wikipedia/en/1/11/Pushpa_2-_The_Rule.jpg",
-      "rating": 5,
-      "review": "Didn't watch.. movie yet to release. eagerly waiting",
-      "watched": false,
-      "year": "2025",
-      "genre": "Thriller"
-    },
-    {
       "id": "c4d0",
       "title": "Joker",
       "description": "Joker is a 2019 American psychological thriller film directed and co-produced by Todd Phillips from a screenplay co-written with Scott Silver. The film, loosely based on DC Comics characters, stars Joaquin Phoenix as the Joker.",
       "image": "https://upload.wikimedia.org/wikipedia/en/e/e1/Joker_%282019_film%29_poster.jpg",
       "genre": "Thriller",
       "year": "2019"
+    },
+    {
+      "id": "ab45",
+      "title": "Star Wars",
+      "description": "Star Wars is an American epic space opera media franchise created by George Lucas, which began with the eponymous 1977 film[a] and quickly became a worldwide pop culture phenomenon",
+      "image": "https://upload.wikimedia.org/wikipedia/en/3/3f/The_Empire_Strikes_Back_%281980_film%29.jpg",
+      "genre": "Action",
+      "year": "1977",
+      "rating": 5,
+      "review": "Its was Just fabulous"
+    },
+    {
+      "id": "7c82",
+      "title": "3 Idiots",
+      "description": "3 Idiots is a 2009 Indian Hindi-language coming-of-age comedy-drama film written, edited and directed by Rajkumar Hirani, co-written by Abhijat Joshi and produced by Vidhu Vinod Chopra",
+      "image": "https://upload.wikimedia.org/wikipedia/en/d/df/3_idiots_poster.jpg",
+      "genre": "comedy",
+      "year": "2014"
     }
   ]
 }
