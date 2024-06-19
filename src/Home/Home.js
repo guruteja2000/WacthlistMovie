@@ -14,7 +14,6 @@ function Home() {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const movies = useSelector(selectAllMovies)
-
   const [editingReview, setEditingReview] = useState(null)
   const [reviewText, setReviewText] = useState("")
 
@@ -23,7 +22,9 @@ function Home() {
   }, [dispatch])
 
   const handleDelete = (id) => {
-    dispatch(deleteMovie(id))
+    dispatch(deleteMovie(id)).then(() => {
+      dispatch(fetchMovies())
+    })
   }
 
   const handleEdit = (id) => {
@@ -32,12 +33,16 @@ function Home() {
 
   const handleRatingChange = (id, newRating) => {
     const movie = movies.find((movie) => movie.id === id)
-    dispatch(updateMovie({ ...movie, rating: newRating }))
+    dispatch(updateMovie({ ...movie, rating: newRating })).then(() => {
+      dispatch(fetchMovies())
+    })
   }
 
   const handleWatchedToggle = (id) => {
     const movie = movies.find((movie) => movie.id === id)
-    dispatch(updateMovie({ ...movie, watched: !movie.watched }))
+    dispatch(updateMovie({ ...movie, watched: !movie.watched })).then(() => {
+      dispatch(fetchMovies())
+    })
   }
 
   const handleReviewChange = (e) => {
@@ -46,7 +51,9 @@ function Home() {
 
   const handleReviewSubmit = (id) => {
     const movie = movies.find((movie) => movie.id === id)
-    dispatch(updateMovie({ ...movie, review: reviewText }))
+    dispatch(updateMovie({ ...movie, review: reviewText })).then(() => {
+      dispatch(fetchMovies())
+    })
     setEditingReview(null)
     setReviewText("")
   }
